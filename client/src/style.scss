@@ -1,0 +1,172 @@
+/*  icons */
+.edit-icon, .delete-icon,plus-icon {
+  color: #A629C2;
+  margin-right: 5px; 
+}
+
+.calendar-icon{
+
+  color: #8a817c;
+  margin-right: 5px;  
+
+}
+
+.white-button {
+  background-color: white;
+  color: #A629C2;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top :20px;
+  right: 20px; /* Keep the button to the right */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 130px;
+}
+.white-button:hover {
+  background-color: #A629C2; /* Change the background color on hover */
+}
+.white-button:focus {
+  background-color: white;
+  color: #A629C2; 
+}
+
+
+/* NavBar */
+
+.nav-link {
+  text-decoration: none; 
+}
+
+.nav-button {
+  background-color: white;
+  border: none;
+  color: #A629C2;
+  margin-right: 1 px; 
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;  
+  width: 100px;
+}
+
+.nav-button:hover {
+  background-color: #A629C2; 
+}
+
+.nav-button:focus {
+  background-color: white;
+  color: #A629C2; 
+}
+
+
+
+/* Style the "Save" button */
+.save-button {
+  background-color: #A629C2;
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px;
+  margin-right: 10px; /* Add space between buttons */
+}
+
+.save-button:hover {
+  background-color: #A629C2;
+}
+
+.save-button:focus {
+  background-color: white;
+  color: #A629C2;
+}
+
+/* Style the "Cancel" button */
+.cancel-button {
+  background-color: white;
+  color: #A629C2;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px;
+}
+
+.cancel-button:hover {
+  background-color: white;
+  color: #A629C2;
+}
+
+.cancel-button:focus {
+  background-color: white;
+  color: #A629C2;
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  cursor: pointer;
+  z-index: 1000; 
+}
+.modal-secondary-title{
+  fontSize: 2px;
+  color: lightgrey;
+}
+.bold-label {
+  font-weight: bold;
+}
+
+/* custom table */
+.custom-row {
+  background-color: white; 
+  border: none; 
+  border-top: 5px solid rgba(0, 0, 0, 0.1); 
+  border-bottom: 5px solid rgba(0, 0, 0, 0.1); 
+  border-radius:0; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+
+}
+
+
+.custom-cell {
+  padding: 16px; 
+  flex: 1; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+
+.custom-text {
+  color: #8a817c; 
+}
+
+.custom-header {
+  background-color: #8a817c;
+  color: #8a817c;
+  text-align: left;
+  padding: 8px 16px; 
+}
+
+.custom-date {
+  background-color: #5fa8d3;
+  color: #00509d;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+.updated-at-cell {
+  display: inline-block;
+  margin-left: 10px; 
+}
+
+
+
+
