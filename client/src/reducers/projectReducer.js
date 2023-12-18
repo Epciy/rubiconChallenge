@@ -1,5 +1,6 @@
 const initialState = {
   projects: [],
+  
 };
 const projectReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -31,6 +32,13 @@ const projectReducer = (state = initialState, action) => {
       return {
         ...state,
         projects: filteredProjects,
+      };
+    case 'FETCH_PROJECTS_SUCCESS':
+      // Handle the action to update projects with the fetched data
+      return {
+        ...state,
+        projects: action.projects,
+
       };
 
     default:

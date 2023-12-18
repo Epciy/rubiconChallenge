@@ -32,6 +32,18 @@ app.get('/api/projects', projectController.getAllProjects);
 app.get('/api/project/:id', projectController.getProjectById);
 app.put('/api/project/:id', projectController.updateProjectById);
 app.delete('/api/project/:id', projectController.deleteProjectById);
+//using route 
+/*
+app.route('/api/projects')
+  .post(projectController.createProject)
+  .get(projectController.getAllProjects);
+
+app.route('/api/project/:id')
+  .get(projectController.getProjectById)
+  .put(projectController.updateProjectById)
+  .delete(projectController.deleteProjectById);
+
+*/
 //Task Routers
 app.post('/api/tasks', taskController.createTask);
 app.get('/api/tasks', taskController.getAllTasks);

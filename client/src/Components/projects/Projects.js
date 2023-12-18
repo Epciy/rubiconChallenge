@@ -3,7 +3,7 @@ import { FaPen, FaTrash, FaRegCalendarAlt } from 'react-icons/fa';
 import { Table, Modal } from 'reactstrap';
 import ProjectForm from './ProjectForm';
 import { getAllProjects } from './../../services/projectApi';
-import { useDispatch } from 'react-redux';
+import { useDispatch,useSelector } from 'react-redux';
 import { deleteProject,updateProject } from '../../actions/projectActions';
 import { formatDate } from './../../utils';
 import useDataFetching from './../../customHooks/useDataFetching'
@@ -11,6 +11,7 @@ import NewElementButton from './../NewElementButton'
 
 const Projects = () => {
   const { data, isModalOpen, fetchData, setIsModalOpen } = useDataFetching(getAllProjects);
+
   const [editedProject, setEditedProject] = useState(null);
   const dispatch = useDispatch();
    
@@ -31,7 +32,7 @@ const Projects = () => {
   };
   const onEditSubmit = async (editedData) => {
     try {
-      // Dispatch an action to update the project data with the editedData
+     
       await dispatch(updateProject(editedProject._id, editedData));
       
       fetchData();
@@ -91,10 +92,10 @@ const Projects = () => {
                           </div>
                         </td>
                   <td>
-                  <FaPen onClick={() => handleEdit(project)} className="edit-icon" />
-                          {' '}
-                          <FaTrash onClick={() => handleDelete(project._id)} className="delete-icon" />
-                        </td>
+                    <FaPen onClick={() => handleEdit(project)} className="edit-icon" />
+                    {' '}
+                    <FaTrash onClick={() => handleDelete(project._id)} className="delete-icon" />
+                  </td>
                 </tr>
               ))}
             </tbody>

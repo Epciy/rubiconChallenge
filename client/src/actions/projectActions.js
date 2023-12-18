@@ -2,8 +2,23 @@ import {
   createProject as createProjectService,
   updateProject as updateProjectService,
   deleteProject as deleteProjectService,
+  getAllProjects 
 } from './../services/projectApi';
 
+
+// action to fetch all Projects :
+export const fetchProjects = () => {
+  return async (dispatch) => {
+    try {
+      const projects = await getAllProjects(); // Fetch projects from your API
+      console.log(projects)
+      dispatch({ type: 'FETCH_PROJECTS_SUCCESS', projects });
+    } catch (error) {
+      console.error('Error fetching projects:', error);
+      dispatch({ type: 'FETCH_PROJECTS_FAILURE', error: error.message });
+    }
+  };
+};
 // Action to add a new project
 export const addProject = (projectData) => {
   return async (dispatch) => {

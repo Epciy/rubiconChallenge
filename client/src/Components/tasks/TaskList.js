@@ -1,17 +1,30 @@
-import React, { useState} from 'react';
+import React, { useState,useEffect} from 'react';
 import { FaPen, FaTrash, FaRegCalendarAlt} from 'react-icons/fa';
 import { Table, Modal } from 'reactstrap';
 import { getAllTasks } from './../../services/taskApi';
 import { formatDate } from './../../utils';
 import useDataFetching from './../../customHooks/useDataFetching'
 import TaskForm from './TaskForm';
-import {useDispatch} from 'react-redux';
+import {useDispatch ,useSelector} from 'react-redux';
 import { deleteTask,updateTask } from '../../actions/taskActions';
+import {fetchProjects} from'../../actions/projectActions';
 import NewElementButton from './../NewElementButton'
 const TaskList=()=>{
 	const { data, isModalOpen, fetchData, setIsModalOpen } = useDataFetching(getAllTasks);
+	
   	const [editedTask, setEditedTask] = useState(null);
-   	const dispatch = useDispatch();
+  	const dispatch = useDispatch();
+   
+
+   	// Create a function to find the project label based on project _id
+   	/*const findProjectLabel = (projectId) => {
+	    if (Array.isArray(projects)) {
+	      const project = projects.find((project) => project._id === projectId);
+	      return project ? project.label : 'Unknown Project'; // Handle cases where the project is not found
+	    }
+	    //return 'Unknown Project'; // Handle cases where projects is not an array
+	};
+	*/   	
 	const toggleModal = () => {
 	    setIsModalOpen(!isModalOpen);
 	};
@@ -113,6 +126,7 @@ const TaskList=()=>{
     </div>
   );
 };
+
 
 export default TaskList;
 

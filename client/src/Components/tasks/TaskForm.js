@@ -13,7 +13,7 @@ const TaskForm = ({ isOpen, toggle, editedTask, onEditSubmit}) => {
   const initialTaskData = {
     label: '',
     description: '',
-    project: data.length > 0 ? data[0]._id : '',
+    project:'',
     startedAt: '',
     endedAt: '',
   };

@@ -18,9 +18,9 @@ export const createProject = async (projectData) => {
 export const getAllProjects = async () => {
   try {
     const response = await axios.get(`${API_URL}/projects`);
-    return response.data; // Return an array of projects
+    return response.data; 
   } catch (error) {
-    throw error; // Handle error as needed
+    throw error; 
   }
 }
 
